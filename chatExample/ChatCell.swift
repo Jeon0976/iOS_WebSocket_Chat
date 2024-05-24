@@ -57,8 +57,15 @@ final class ChatCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             chatView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
-            chatView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -6),
-            chatView.widthAnchor.constraint(lessThanOrEqualToConstant: 200)    
+            chatView.bottomAnchor.constraint(
+                equalTo: self.contentView.bottomAnchor,
+                constant: -6
+            ),
+            chatView.widthAnchor.constraint(
+                lessThanOrEqualTo: self.contentView.widthAnchor,
+                multiplier: 0.8,
+                constant: 0
+            )
         ])
     }
     

@@ -147,6 +147,8 @@ class ViewController: UIViewController {
             with: chat.type == .me ? .right : .left
         )
         chatTableView.endUpdates()
+        
+        chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
 }
 
